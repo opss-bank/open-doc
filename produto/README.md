@@ -97,7 +97,7 @@ Retorna a lista de produtos de um parceiro.
 }
 ```
 
-Para diferenciar se um campo é obrigatório ou opcional, basta verificar se o bit correspondente está ligado no campo `NU_CamposObrigatorios` ou `NU_CamposOpcionais`.
+Para diferenciar se um campo é obrigatório ou opcional, basta verificar se o bit correspondente está ligado no campo `NU_CamposObrigatorios` ou `NU_CamposOpcionais`. É também possível averiguar pela propriedade `mandatory` de cada campo.
 
 Essa verificação pode ser feita com a seguinte expressão:
 
