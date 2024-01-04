@@ -319,7 +319,7 @@ Registra uma venda de um produto, feita por um parceiro.
 			}
 		],
 		"pagamento": {
-			"tipo": 1,
+			"TP_Pagamento": 1,
 			"dados": {
 				"CO_Cartao": "1234567890123456",
 				"CO_CVV": "123",
@@ -335,7 +335,7 @@ Registra uma venda de um produto, feita por um parceiro.
 
 O pagamento deve ter as seguintes propriedades:
 
-* `tipo`: Tipo de pagamento. Pode ser:
+* `TP_Pagamento`: Tipo de pagamento. Pode ser:
 	* `1`: Cartão de Crédito
 	* `2`: Boleto
 	* `3`: Débito em Conta
