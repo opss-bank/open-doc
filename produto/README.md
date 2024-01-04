@@ -317,9 +317,50 @@ Registra uma venda de um produto, feita por um parceiro.
 					}
 				]
 			}
-		]
+		],
+		"pagamento": {
+			"TP_Pagamento": 1,
+			"dados": {
+				"CO_Cartao": "1234567890123456",
+				"CO_CVV": "123",
+				"CO_Validade": "1224",
+				"DE_Pessoa": "JOAQUIM DA SILVA",
+				"CO_CPF": "00000000191",
+			}
+		}
 	}
 ```
+
+#### Pagamento
+
+O pagamento deve ter as seguintes propriedades:
+
+* `TP_Pagamento`: Tipo de pagamento. Pode ser:
+	* `1`: Cartão de Crédito
+	* `2`: Boleto
+	* `3`: Débito em Conta
+* `dados`: Dados do pagamento. Os dados variam de acordo com o tipo de pagamento.
+	* `tipo = 1`: Cartão de Crédito
+		* `CO_Cartao`: Número do cartão de crédito(apenas números)
+		* `CO_CVV`: Código de segurança do cartão de crédito
+		* `DE_Validade`: Data de validade do cartão de crédito(MMAA)
+		* `DE_Pessoa`: Nome do titular do cartão de crédito
+		* `CO_CPF`: CPF do titular do cartão de crédito(apenas números)
+	* `tipo = 2`: Boleto
+		* `EM_Email`: Email para envio do boleto
+		* `NU_DiaPagamento`: Dia do mês para pagamento do boleto
+	* `tipo = 3`: Débito em Conta
+		* `CO_Banco`: Código do banco
+		* `CO_Agencia`: Número da agência
+		* `CO_AgenciaDV`: Dígito da agência
+		* `CO_ContaCorrente`: Número da conta
+		* `CO_ContaCorrenteDV`: Dígito da conta corrente(opcional)
+		* `CO_Operacao`: Número da operação(obrigatório apenas para Caixa Econômica Federal)
+		* `CO_CPF`: CPF do titular da conta(apenas números)
+		* `NU_DiaDebito`: Dia do mês para débito em conta
+		* `TP_ContaCorrente`: Tipo de conta corrente
+			* `1`: Conta Corrente
+			* `2`: Conta Poupança
 
 ### GET /aberto/produto/{id}/pdf
 
