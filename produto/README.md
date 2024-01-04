@@ -343,7 +343,7 @@ O pagamento deve ter as seguintes propriedades:
 	* `tipo = 1`: Cartão de Crédito
 		* `CO_Cartao`: Número do cartão de crédito(apenas números)
 		* `CO_CVV`: Código de segurança do cartão de crédito
-		* `CO_Validade`: Data de validade do cartão de crédito(MMAA)
+		* `DE_Validade`: Data de validade do cartão de crédito(MMAA)
 		* `DE_Pessoa`: Nome do titular do cartão de crédito
 		* `CO_CPF`: CPF do titular do cartão de crédito(apenas números)
 	* `tipo = 2`: Boleto
