@@ -4,6 +4,7 @@ Documentação das API OpssBank
 ## Lista de API
 
 - [Produtos](produto/README.md)
+- [Leads](lead/README.md)
 
 
 ## Fluxo de venda
